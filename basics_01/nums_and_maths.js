@@ -16,7 +16,7 @@ const num = 25.58;
 
 const amount = 100000;
 // console.log(amount.toLocaleString()); //100,000; return in US stand.
-// console.log(amount.toLocaleString("en-IN")); //1,00,000; Indian Stan
+// console.log(amount.toLocaleString("en-IN")); //1,00,000; Indian Stand.
 
 // Number.MAX_SAFE_INTEGER; // 9007199254740991
 
@@ -32,8 +32,8 @@ console.log(Math); //use google console to check Math related methods.
 // console.log(Math.max(5, 3, 6));
 
 console.log(Math.random()); // In between 0 to 0.999
-console.log(Math.random() * 100);
-console.log(Math.random() * 10 + 1); // To start the range from 1 not 0.Now in between 1 to 10
+console.log(Math.random() * 100); //// In between 0 to 99.999
+console.log(Math.random() * 10 + 1); // To start the range from 1 not 0. Now in between 1 to 10
 console.log(Math.floor(Math.random() * 10) + 1); // To get decimal vlaue
 
 // Need to know this formula must:

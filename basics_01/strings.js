@@ -23,10 +23,10 @@ const gameName = new String("Mini-Militia");
 const newStr = gameName.substring(2, 5); // ni- (start, end)
 console.log(newStr);
 
-const anotherString = gameName.slice(0, 3); // Min
+const anotherString = gameName.slice(0, 3); // Min  (indexStart, indexEnd)
 console.log(anotherString);
 
-console.log(gameName); // Stack
+console.log(gameName); // Stack: [String: 'Mini-Militia']
 
 const newStr2 = gameName.slice(-4); // it log(prints) in reverse. N.B: only slice can take neg index.
 console.log(newStr2);
