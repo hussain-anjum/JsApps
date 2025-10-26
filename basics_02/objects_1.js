@@ -1,5 +1,3 @@
-// singleton: Object.create (constructor)
-
 // object literals:
 
 const user = {};
@@ -13,13 +11,14 @@ const JsUser = {
   age: 17,
   email: "har@github.com",
   isLoggedIn: true,
-  mySymbol: "mykey",
+  [mySymbol]: "mykey", //must know this key:value pair syntax for Symbol
 };
 
-// console.log(JsUser);
+console.log(JsUser);
 
-// console.log(JsUser.name);
-// console.log(JsUser.mySymbol);
+console.log(JsUser.name);
+console.log(JsUser.mySymbol); // undefined
+console.log(JsUser[mySymbol]); // must use []
 
 //But there is another way to access obj value and That is more efficient:
 // console.log(JsUser["id"]);
@@ -40,10 +39,10 @@ JsUser.greeting = function () {
   console.log("Hello there!");
 };
 
-console.log(JsUser.greeting()); // Now greeting() is a method
+// console.log(JsUser.greeting()); // Now greeting() is a method
 
 JsUser.greetingTwo = function () {
   console.log(`Hello JS user, ${this.name}`); // use 'this' to refer the same Obj.
 };
 
-console.log(JsUser.greetingTwo());
+// console.log(JsUser.greetingTwo());
