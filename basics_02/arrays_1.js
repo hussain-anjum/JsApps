@@ -32,7 +32,7 @@ const newElement = elements.join();
 // console.log(newElement); //"Fire,Air,Water"
 // console.log(typeof newElement); // string
 
-// console.log(elements.join(" ")); //"FireAirWater"
+// console.log(elements.join(" ")); //"Fire Air Water"
 // console.log(elements.join("-")); //"Fire-Air-Water"
 
 //++++++++++++++++++    slice & splice: ++++++++++++++++++++

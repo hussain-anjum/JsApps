@@ -4,6 +4,8 @@ const userName = "har";
 const idCount = 30;
 
 // console.log(userName + "has " + idCount + " accounts"); // avoid this syntax for concat
+
+// ++++++++++++     String Interpolation    +++++++++++
 // console.log(`${userName} has ${idCount} accounts`); // use this syntax, where it starts with backtick(`)
 
 // using Obj:

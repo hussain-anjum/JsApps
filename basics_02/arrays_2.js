@@ -14,7 +14,6 @@ const allHeros = marvel_heros.concat(dc_heros); // Now, it returns a new array b
 
 const cartoon = ["oggy", "ben10", "doremon"];
 const all_new_heros = [...marvel_heros, ...dc_heros, ...cartoon];
-
 // console.log(all_new_heros);
 
 // ++++++++     Need to read documentation from MDN first   ++++++++
