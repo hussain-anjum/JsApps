@@ -24,7 +24,7 @@ console.log(JsUser[mySymbol]); // must use []
 // console.log(JsUser["id"]);
 // console.log(JsUser["name"]);
 
-JsUser.email = "har@google.com"; //it will the email of JsUser
+JsUser.email = "har@google.com"; //it will be the new email of JsUser
 // console.log(JsUser);
 
 //But if we freeze the Obj. No value will be change of this Obj:
