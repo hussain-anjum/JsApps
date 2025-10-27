@@ -1,4 +1,4 @@
-//array declaration:
+//################      array declaration:      ################
 const myArray = [5, 6, 2, 8, 9];
 // console.log(myArray);
 // console.log(myArray[3]);
@@ -9,7 +9,7 @@ const myArray2 = [1, "har", 3, "abul", true];
 const myArray3 = new Array(5, 6, 1, 5, 8);
 // console.log(myArray3);
 
-//Methods:
+// ################     Methods:    ################
 myArray.push(7); // insert element at the last position of array.
 myArray.push(3);
 // console.log(myArray);
@@ -27,7 +27,7 @@ myArray.shift(); // remove element from the first position of array; shift other
 
 //+++++++++++++     join: syntax--> join(separator);    ++++++++++++++++++
 const elements = ["Fire", "Air", "Water"];
-const newElement = elements.join();
+const newElement = elements.join(); // return string by joining elements
 
 // console.log(newElement); //"Fire,Air,Water"
 // console.log(typeof newElement); // string

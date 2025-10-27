@@ -25,7 +25,7 @@ const real_another_array = another_array.flat(3); // combine into a single array
 
 // console.log(Array.isArray(marvel_heros)); //true
 // console.log(Array.from("Hussain")); //create an array by string char.
-// console.log(Array.from({ name: "hitesh" })); // []; return empty array, because We need to define for which(key or value) we want to create an array.
+// console.log(Array.from({ name: "har" })); // []; return empty array, because We need to define for which(key or value) we want to create an array.
 
 let score1 = 100;
 let score2 = 200;
