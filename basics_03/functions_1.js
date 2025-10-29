@@ -35,16 +35,16 @@ function loginMessage(userName) {
   }
   return `${userName} just logged in`;
 }
-// console.log(loginMessage("har"));    // har just logged in
-// console.log(loginMessage()); // undefined just logged in (it will show without if condition)
-// console.log(loginMessage()); // Please enter a valid userName (it will show with if condition)
+console.log(loginMessage("har")); // har just logged in
+console.log(loginMessage()); // undefined just logged in (it will show without if condition)
+console.log(loginMessage()); // Please enter a valid userName (it will show with if condition)
 
 function greetings(user = "Unknown") {
   return `Welcome! ${user}`;
 }
 // console.log(greetings("har")); //Welcome! har
 
-// if we don't pass any attribute Unknown will be the default user.
+// if we don't pass any attribute; Unknown will be the default user.
 // console.log(greetings()); //Welcome! Unknown;
 
 // Imagine shopping cart:
