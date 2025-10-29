@@ -25,7 +25,8 @@ const adobeUser = {
 // console.log(adobeUser.name.fullName.fName); //abul
 
 console.log(adobeUser.name.fullName?.fName);
-// ?.(optional chaining operator) means it tells JS to check 'fullName' exists or not. If exists then access, if not then just show undefiened not error.
+// ?.(optional chaining operator) means it tells JS to check 'fullName' exists or not. If exists then access, if not then just show
+// undefiened not error.
 // console.log(adobeUser.name.motherName?.fName); // undefined
 
 const obj1 = { 1: "a", 2: "b" };
@@ -103,8 +104,8 @@ console.log(teacher);
 // Here, Key will be in "string".
 
 //  {
-//     "name": "hitesh",
-//     "coursename": "js in hindi",
+//     "name": "har",
+//     "coursename": "JS",
 //     "price": 1000
 // }
 
