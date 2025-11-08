@@ -42,8 +42,8 @@ const myObject = {
   game3: "Batman",
 };
 
-// Objects are not iterable by default in for...of loops
+// Objects are not iterable by default in for...of loops we can use for...in loop for objects
 
-// for (const [key, value] of myObject) {
+// for (const [key, value] of myObject) {   // Show an error
 //   console.log(key, ":-", value);
 // }
