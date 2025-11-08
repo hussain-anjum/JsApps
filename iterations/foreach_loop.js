@@ -4,6 +4,8 @@
 // using regular function:
 // array_name.forEach( function(currentValue, index, arr) { //code block } )    NB: callback fuction has no name
 
+// callbackFn: A function to execute for each element in the array. Its return value is added as a single element in the new array.
+
 // using arrow function:
 // array_name.forEach( (currentValue, index, arr) => { //code block } )
 
