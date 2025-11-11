@@ -1,0 +1,43 @@
+## DOM (Document Object Model)
+
+Definition:
+The **Document Object Model (DOM)** is a programming interface for web documents. It represents an HTML page as a structured 
+tree of nodes and objects, allowing programming languages like JavaScript to **interact with, access, and modify** the page’s structure, 
+style, and content.
+
+### Example HTML
+<html>
+  <body>
+    <h1>Hello har</h1>
+    <p>This is a paragraph.</p>
+  </body>
+</html>
+
+### **Corresponding DOM Tree**
+Document
+ └── html
+      └── body
+           ├── h1
+           │    └── "Hello har" (text node)
+           └── p
+                └── "This is a paragraph." (text node)
+
+
+## DOM Interfaces (Commonly Used in Console):
+
+### document object:
+The `document` object is the main entry point to the DOM. It allows you to select and manipulate HTML elements.
+
+Common Methods & Properties:
+
+| Method / Property                    | Description                                                            |
+| ------------------------------------ | ---------------------------------------------------------------------- |
+| document.getElementById('id_name')   | Selects an element by its ID.                                          |
+| .id                                  | Returns the ID of the selected element.                                |
+| .className                           | Returns the class name(s) of the selected element.                     |
+| .getAttribute('id')                  | Returns the value of the specified attribute.                          |
+| .getAttribute('class')               | Returns the value of the class attribute.                              |
+| .setAttribute('class', 'test')       | Sets or updates the specified attribute value.                         |
+| .textContent                         | Returns or sets the text content of an element (includes hidden text). |
+| .innerText                           | Returns or sets the visible text content only.                         |
+| .innerHTML                           | Returns or sets the HTML content inside an element.                    |
