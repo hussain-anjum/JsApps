@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Learning</title>
+  </head>
+  <body style="background-color: #212121; color: #fff"></body>
+  <script>
+    const div = document.createElement("div"); // <div></div>: it creates a div element in memory only (not in DOM)
+    console.log(div);
+    div.className = "main";
+    div.id = Math.round(Math.random() * 10 + 1);
+    div.setAttribute("title", "generated title");
+    div.style.backgroundColor = "green";
+    div.style.padding = "12px";
+    // div.innerText = "Hola! JavaScript";  // use innerText to add text content
+    // div.innerHTML = "<h1> Hello JS </h1>"; // use innerHTML to add HTML content  // (can parse HTML tags)
+    const addText = document.createTextNode("JS is fun!"); // create a text node
+    div.appendChild(addText); // append the text node to div
+
+    document.body.appendChild(div); // finally append the div to body to make it visible in DOM
+  </script>
+</html>
