@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Learning</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <div class="parent">
+      <!-- this is a comment -->
+      <div class="day">Monday</div>
+      <div class="day">Tuesday</div>
+      <div class="day">Wednesday</div>
+      <div class="day">Thursday</div>
+    </div>
+  </body>
+  <script>
+    const parent = document.querySelector(".parent");
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[1].innerHTML);
+
+    // Loop through children elements of parent and log their innerHTML to console:
+    // for (let i = 0; i < parent.children.length; i++) {
+    //      console.log(parent.children[i].innerHTML);
+    // }
+
+    parent.children[1].style.color = "orange"; // Tuesday in orange color
+    // console.log(parent.firstElementChild);  // Monday
+    // console.log(parent.lastElementChild);    // Thursday
+
+    const dayOne = document.querySelector(".day");
+    // console.log(dayOne.innerHTML); // Monday
+    // console.log(dayOne.parentElement); // parent div
+    // console.log(dayOne.nextElementSibling.innerHTML); // Tuesday
+    // console.log(dayOne.previousElementSibling); // null
+
+    // console.log("NODES: ", parent.childNodes); // shows all child nodes including text nodes (like spaces, comments, line breaks)
+  </script>
+</html>
