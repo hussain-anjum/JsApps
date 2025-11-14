@@ -38,12 +38,12 @@
     console.log(secondLang);
     //secondLang.innerHTML = "Mojo"
 
-    // 2nd way: using replaceWith (optimized) ✅
+    // 2nd way: using replaceWith (optimized) ✅  Best for replacing text content only
     const newli = document.createElement("li");
     newli.textContent = "C#";
     secondLang.replaceWith(newli); // replacing 2nd li with newli element
 
-    // 3rd way: using outerHTML (optimized) ✅ Go for this method always
+    // 3rd way: using outerHTML (optimized) ✅ Best for replacing with new HTML content
     const firstLang = document.querySelector("li:first-child");
     console.log(firstLang);
     firstLang.outerHTML = "<li>TypeScript</li>"; // replacing 1st li with new HTML content
