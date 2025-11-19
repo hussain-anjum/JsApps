@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Events</title>
+  </head>
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Amazing Images</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="camera"
+            src="https://images.unsplash.com/photo-1763315152539-06fc234b526c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="camera"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="bike"
+            src="https://images.unsplash.com/photo-1613168155634-8989fc4bca4d?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="bike"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="batman"
+            src="https://images.unsplash.com/photo-1531259683007-016a7b628fc3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="batman"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="messi"
+            src="https://images.unsplash.com/photo-1671016233853-5db7def7ff76?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="messi"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="food"
+            src="https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="food"
+          />
+        </li>
+        <li>
+          <a style="color: aliceblue" href="https://google.com" id="google"
+            >Google</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // 3 ways to add event listeners in JavaScript:
+    // 1. Using HTML attribute (not recommended): onclick="functionName()"
+
+    // 2. Using DOM property: element.onclick = function();
+    document.getElementById("camera").onclick = function () {
+      alert("Camera clicked");
+    };
+
+    // 3. Using addEventListener() method(Best way): element.addEventListener("event", functionName());
+
+    // Event Object Key Notes:
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // Example of Event Propagation:
+    // Syntax: element.addEventListener("event", function(){}, useCapture);
+
+    // Event Bubbling and Capturing --> Event bubbling and capturing describe the two phases of how events propagate through the
+    // Document Object Model (DOM) in JavaScript. When an event, such as a click, occurs on an element, it doesn't just trigger that
+    // element's event handler; it also travels through its ancestors and descendants.
+
+    // Bubbling Phase: In this phase, the event starts from the innermost element (the target element) and propagates outward to its
+    // parent elements. This means that if you click on a child element, the event will first trigger the event handler on that child element,
+    // and then it will "bubble up" to its parent elements, triggering their event handlers as well.
+
+    // Capturing Phase: In contrast to bubbling, the capturing phase starts from the outermost element (usually the document or window)
+    // and propagates inward to the target element. During this phase, the event is captured by each ancestor element before reaching the target element.
+
+    //document.getElementById("images").addEventListener(
+    //  "click",
+    //  function (e) {
+    //    console.log("clicked inside the ul");
+    //  },
+    //  false // bubbling phase: use false(default), capturing phase: use true
+    //);
+
+    //document.getElementById("bike").addEventListener(
+    //  "click",
+    //  function (e) {
+    //    console.log("Bike clicked");
+    //  },
+    //  false
+    //);
+
+    //document.getElementById("bike").addEventListener(
+    //  "click",
+    //  function (e) {
+    //    console.log("Bike clicked");
+    //    e.stopPropagation(); // stops the event from bubbling up the DOM tree to parent elements
+    //  },
+    //  false
+    //);
+
+    //document.getElementById("google").addEventListener(
+    //  "click",
+    //  function (e) {
+    //    e.preventDefault(); // prevents the default action of the event from occurring (eg. navigating to a link)
+    //    e.stopPropagation();
+    //    console.log("google clicked");
+    //  },
+    //  false
+    //);
+
+    // Example of Event Delegation:
+    //document.querySelector("#images").addEventListener("click", function (e) {
+    //  console.log(e.target.tagName);  // shows which element was clicked inside the ul
+    //  if (e.target.tagName === "IMG") {
+    //    console.log(e.target.id);
+    //    let removeIt = e.target.parentNode;
+    //    removeIt.remove();
+    //  }
+    //});
+  </script>
+</html>
