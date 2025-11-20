@@ -1,3 +1,5 @@
+// This projecet based on Async JS concepts like setInterval and clearInterval
+
 const randomColor = function () {
   const hex = "0123456789abcdef";
   let color = "#";
