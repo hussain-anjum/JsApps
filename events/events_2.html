@@ -10,7 +10,7 @@
     <button id="stop">Stop</button>
   </body>
   <script>
-    // setTimeout--> The setTimeout() method in JavaScript is used to schedule the execution of a function or a piece of code after
+    // setTimeout()--> The setTimeout() method in JavaScript is used to schedule the execution of a function or a piece of code after
     // a specified delay, measured in milliseconds and it runs only once. It is a fundamental part of asynchronous JavaScript, allowing
     // for timed events and non-blocking operations.
 
@@ -24,6 +24,9 @@
       document.querySelector("h1").innerHTML = "Wooho! I am changed.";
     };
     const changeMe = setTimeout(changeText, 5000);
+
+    // clearTimeout() --> The clearTimeout() method in JavaScript is used to cancel a timeout that was previously established by calling setTimeout().
+    // This method prevents the function or code scheduled to run after the specified delay from executing if it hasn't already done so.
 
     document.querySelector("#stop").addEventListener("click", function () {
       clearTimeout(changeMe); // to stop the timeout before it executes
