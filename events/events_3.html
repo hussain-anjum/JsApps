@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asynchronous JavaScript 2</title>
+  </head>
+  <body>
+    <h1>Control the Inetervel!</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // setInterval() --> The setInterval() method in JavaScript is used to repeatedly execute a specified function or code snippet
+    // at fixed time intervals, measured in milliseconds. It continues to run the function until it is explicitly stopped using clearInterval().
+
+    // Synax: setInterval(function ref, delay, param1, param2, ...);
+
+    //const sayDate = function (str) {
+    //  console.log(str, Date.now()); // logs the current date and time in milliseconds along with the passed string
+    //};
+    //const intervalId = setInterval(sayDate, 1000, "hi");
+
+    // clearInterval(intervalId); // to stop the interval immediately after starting it (for demonstration purposes)
+
+    let printNum; // to hold the interval ID so that it can be accessed in both event.
+
+    document.querySelector("#start").addEventListener("click", function () {
+      const showRandomNum = function (str) {
+        console.log(str, Math.random() * 10);
+      };
+      printNum = setInterval(showRandomNum, 1000, "Random number: "); // to print a random number every 2 seconds when start button is clicked
+      console.log("Interval Started");
+    });
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearInterval(printNum); // to stop the interval when stop button is clicked
+      console.log("Interval Stopped");
+    });
+  </script>
+</html>
