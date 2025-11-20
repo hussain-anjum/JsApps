@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asynchronous JavaScript</title>
+  </head>
+  <body>
+    <h1>Change me if you can!</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    // setTimeout--> The setTimeout() method in JavaScript is used to schedule the execution of a function or a piece of code after
+    // a specified delay, measured in milliseconds and it runs only once. It is a fundamental part of asynchronous JavaScript, allowing
+    // for timed events and non-blocking operations.
+
+    // Synax: setTimeout(function ref, delay, param1, param2, ...);
+
+    const sayMyName = function () {
+      console.log("HAR");
+    };
+    // setTimeout(sayMyName, 3000);  // after 3 sec, "HAR" will be logged to the console once.
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "Wooho! I am changed.";
+    };
+    const changeMe = setTimeout(changeText, 5000);
+
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(changeMe); // to stop the timeout before it executes
+      console.log("STOPPED");
+    });
+  </script>
+</html>
