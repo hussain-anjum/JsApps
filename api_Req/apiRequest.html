@@ -70,8 +70,11 @@
     // It is used to retrieve data from a URL without having to do a full page refresh. This enables a Web page to update
     // just part of a page without disrupting what the user is doing.
 
+    // Older way: XMLHttpRequest object method to make API requests to get data from a server ==>
     const requestUrl = "https://api.github.com/users/hussain-anjum";
+
     const xhr = new XMLHttpRequest();
+
     xhr.open("GET", requestUrl); // initializes a request  method and url to send the request to
     xhr.onreadystatechange = function () {
       console.log(xhr.readyState); // logs the current state of the request (0 to 4)
@@ -82,5 +85,12 @@
       }
     };
     xhr.send(); // sends the request to the server
+
+    // New way: Fetch API method to make API requests to get data from a server ==>
+
+    //fetch("https://api.github.com/users/hussain-anjum")
+    //  .then((response) => response.json())
+    //  .then((data) => console.log(data.twitter_username))
+    //  .catch((error) => console.error(error));
   </script>
 </html>
